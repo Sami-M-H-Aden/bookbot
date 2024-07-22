@@ -1,6 +1,7 @@
 def main():
     file_contents = get_book_contents("frankenstein")
-    word_count = word_counter(file_contents)
+    num_words = word_counter(file_contents)
+    print(f"{num_words} words were found in the document")
 
 def get_book_contents(book_name):
     with open(f"books/{book_name}.txt") as f:
