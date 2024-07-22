@@ -16,13 +16,11 @@ def word_counter(file_contents):
 def count_characters(file_contents):
     char_dict = {}
     lowered_contents = file_contents.lower()
-    lowered_contents = lowered_contents.split()
     for i in lowered_contents:
-        for j in i:
-            if j in char_dict:
-                char_dict[j] += 1
-            else:
-                char_dict[j] = 1
+        if i in char_dict:
+            char_dict[i] += 1
+        else:
+            char_dict[i] = 1
     return char_dict
 
 
